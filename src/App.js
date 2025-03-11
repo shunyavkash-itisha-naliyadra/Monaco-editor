@@ -16,7 +16,6 @@ function App() {
   const handleEditorDidMount = (editor) => {
     editorRef.current = editor;
   };
-  // Toggle preview panel
   const togglePreview = () => {
     setShowPreview((prev) => !prev);
   };
