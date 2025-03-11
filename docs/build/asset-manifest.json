@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Monaco-editor/static/css/main.e92e3f15.css",
+    "main.js": "/Monaco-editor/static/js/main.95aa04c5.js",
+    "static/js/453.87e9f4a3.chunk.js": "/Monaco-editor/static/js/453.87e9f4a3.chunk.js",
+    "index.html": "/Monaco-editor/index.html",
+    "main.e92e3f15.css.map": "/Monaco-editor/static/css/main.e92e3f15.css.map",
+    "main.95aa04c5.js.map": "/Monaco-editor/static/js/main.95aa04c5.js.map",
+    "453.87e9f4a3.chunk.js.map": "/Monaco-editor/static/js/453.87e9f4a3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e92e3f15.css",
+    "static/js/main.95aa04c5.js"
+  ]
+}
