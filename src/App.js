@@ -7,6 +7,7 @@ function App() {
     "## Welcome to Monaco Markdown Editor!"
   );
   const [showPreview, setShowPreview] = useState(false);
+  const [theme, setTheme] = useState("light");
   const editorRef = useRef(null);
   // Handle content change
   const handleEditorChange = (value) => {
@@ -19,6 +20,9 @@ function App() {
   const togglePreview = () => {
     setShowPreview((prev) => !prev);
   };
+  const toggleTheme = () =>
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+
   useEffect(() => {
     if (editorRef.current) {
       requestAnimationFrame(() => {
@@ -33,6 +37,14 @@ function App() {
         <button onClick={togglePreview} className="toggle-btn">
           {showPreview ? "Hide Preview" : "Show Preview"}
         </button>
+        <label className="switch">
+          <input
+            type="checkbox"
+            onChange={toggleTheme}
+            checked={theme === "dark"}
+          />
+          <span className="slider round"></span>
+        </label>
       </header>
       {/* Main Content: Editor and Preview */}
       <main className={`main-content ${showPreview ? "with-preview" : ""}`}>
@@ -44,7 +56,7 @@ function App() {
             value={markdown}
             onChange={handleEditorChange}
             onMount={handleEditorDidMount}
-            theme="vs-dark"
+            theme={theme === "dark" ? "vs-dark" : "light"}
           />
         </section>
         {/* Preview Section */}
