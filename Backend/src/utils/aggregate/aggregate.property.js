@@ -1,0 +1,15 @@
+export const property = () => ({
+  _id: 1,
+  firstName: 1,
+  lastName: 1,
+  address: 1,
+  email: 1,
+  isActive: 1,
+  userId: "$userId._id",
+  userFirstName: "$userId.firstName",
+  userLastName: "$userId.lastName",
+  userEmail: "$userId.email",
+  userPhoneNumber: "$userId.phone",
+  createdAt: 1,
+  updatedAt: 1,
+});

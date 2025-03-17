@@ -58,6 +58,96 @@ body,
   color: var(--text-color);
   box-sizing: border-box;
 }
+
+/* Markdown styles */
+.preview-section h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.preview-section p {
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.preview-section code {
+  background-color: rgba(27, 31, 35, 0.05);
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  border-radius: 3px;
+  line-height: 30px;
+}
+
+.preview-section pre {
+  background-color: #f6f8fa;
+  padding: 16px;
+  overflow: auto;
+  border-radius: 6px;
+}
+
+.preview-section pre code {
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+
+.preview-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+.preview-section th,
+.preview-section td {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.preview-section tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.preview-section tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.preview-section blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+  margin: 0;
+}
+
+.preview-section ul,
+ol {
+  padding-left: 2em;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.preview-section a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.preview-section a:hover {
+  text-decoration: underline;
+}
+
+.preview-section hr {
+  border: 0;
+  border-top: 1px solid #e1e4e8;
+  margin: 1em 0;
+}
 .header {
   padding: 10px 20px;
   background: #f1f1f1;
@@ -74,6 +164,7 @@ body,
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-left: 5px;
   transition: background 0.2s ease;
 }
 
