@@ -1,11 +1,13 @@
-export const getMarkdown = async () => {
+export const getMarkdown = async (type) => {
   try {
-    const res = await fetch(`http://localhost:8081/api/v1/readme/`, {
+    console.log("================", type);
+
+    const res = await fetch(`http://localhost:8081/api/v1/readme/${type}`, {
       method: "get",
       headers: { "Content-Type": "application/json" },
     });
     const data = await res.json();
-    return data?.data[0]?.description;
+    return data?.data?.description;
   } catch (err) {
     console.error(err);
   }

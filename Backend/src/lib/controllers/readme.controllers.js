@@ -3,13 +3,14 @@ import ReadMe from '../readme.model.js';
 // Create ReadMe
 export const createReadme = async (req, res) => {
   try {
-    const { description } = req.body;
+    const { description, type } = req.body;
+    console.log(type, '----------');
 
     const savedReadMe = await ReadMe.updateOne(
       {
-        type: 'javaScript'
+        type: type
       },
-      { description },
+      { description, type },
       { upsert: true }
     );
     return SendResponse(
@@ -26,7 +27,8 @@ export const createReadme = async (req, res) => {
 // Get All readme
 export const getAllReadMe = async (req, res) => {
   try {
-    const readme = await ReadMe.find();
+    const type = req.params.type;
+    const readme = await ReadMe.findOne({ type: type });
     return SendResponse(
       res,
       200,

@@ -8,6 +8,6 @@ const router = express.Router();
 
 // Routes
 router.post('/', createReadme);
-router.get('/', getAllReadMe);
+router.get('/:type', getAllReadMe);
 
 export default router;
